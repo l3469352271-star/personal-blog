@@ -1,8 +1,8 @@
 {
-  "title": "慢慢写，认真想",
+  "title": "兔猫的blog",
   "description": "记录技术、生活与思考",
-  "author": "你的名字",
-  "avatar": "",
+  "author": "kikotumao",
+  "avatar": "assets/uploads/9499ff659fc99b197b8bdb516602694a.jpg",
   "links": [
     {
       "label": "GitHub",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Email",
-      "url": "mailto:hello@example.com"
+      "url": "https://mail.google.com/mail/"
     }
   ]
 }
