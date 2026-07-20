@@ -35,17 +35,6 @@
       ],
       "readingTime": "5 分钟",
       "file": "content/posts/writing-workflow.md"
-    },
-    {
-      "title": "1+1=2",
-      "slug": "first blog",
-      "date": "2026-07-21",
-      "summary": "研究",
-      "tags": [
-        "数学"
-      ],
-      "readingTime": "2分钟",
-      "file": "content/posts/my-first-post.md"
     }
   ]
 }
