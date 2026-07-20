@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: l3469352271-star/personal-blog
+  name: git-gateway
   branch: main
-  base_url: https://REPLACE_WITH_YOUR_OAUTH_PROXY_DOMAIN
-  auth_endpoint: auth
 
 site_url: https://l3469352271-star.github.io/personal-blog/
 display_url: https://l3469352271-star.github.io/personal-blog/
