@@ -10,6 +10,26 @@ media_folder: assets/uploads
 public_folder: assets/uploads
 
 collections:
+  - name: site_settings
+    label: 网站设置
+    files:
+      - name: site
+        label: 名称、头像与链接
+        file: content/site.json
+        format: json
+        fields:
+          - { label: 网站名称, name: title, widget: string }
+          - { label: 网站简介, name: description, widget: text }
+          - { label: 作者名称, name: author, widget: string }
+          - { label: 头像, name: avatar, widget: image, required: false, hint: "可在此上传头像；留空则显示文字头像。" }
+          - label: 社交链接
+            name: links
+            widget: list
+            required: false
+            fields:
+              - { label: 名称, name: label, widget: string }
+              - { label: 链接地址, name: url, widget: string }
+
   - name: posts
     label: 文章正文
     label_singular: 文章

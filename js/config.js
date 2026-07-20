@@ -9,6 +9,7 @@ window.blogConfig = {
       { label: "Email", url: "mailto:hello@example.com" }
     ]
   },
+  siteFile: "content/site.json",
   aboutFile: "content/about.md",
   postsFile: "content/posts.json",
   posts: []

@@ -6,10 +6,11 @@
   const searchInput = document.querySelector("#searchInput");
   let currentSearch = "";
   let renderVersion = 0;
+  let siteSettings = config.site || {};
   let posts = Array.isArray(config.posts) ? config.posts : [];
 
   function site() {
-    return config.site || {};
+    return siteSettings;
   }
 
   function escapeHtml(value) {
@@ -66,6 +67,26 @@
       });
     } catch (error) {
       console.warn("无法加载文章目录，将使用备用文章配置。", error);
+    }
+  }
+
+  async function loadSiteSettings() {
+    if (!config.siteFile) {
+      return;
+    }
+
+    try {
+      const response = await fetch(config.siteFile, { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error("站点设置加载失败");
+      }
+      const data = await response.json();
+      if (!data || Array.isArray(data) || typeof data !== "object") {
+        throw new Error("站点设置格式无效");
+      }
+      siteSettings = Object.assign({}, siteSettings, data);
+    } catch (error) {
+      console.warn("无法加载站点设置，将使用备用站点配置。", error);
     }
   }
 
@@ -275,6 +296,7 @@
   }
 
   async function bootstrap() {
+    await loadSiteSettings();
     setSiteChrome();
     setupInteractions();
     await loadPosts();

@@ -26,7 +26,7 @@
         <nav class="nav-center" id="site-nav" aria-label="主导航">
           <a class="nav-link" href="#/" data-nav="home">首页</a>
           <a class="nav-link" href="#/about" data-nav="about">关于</a>
-          <a class="nav-link" href="admin/" target="_blank" rel="noreferrer">写作后台</a>
+          <a class="nav-link" href="https://tumaopersonal-blog.netlify.app/admin/" target="_blank" rel="noreferrer">写作后台</a>
         </nav>
 
         <div class="nav-actions">
@@ -54,5 +54,16 @@
     </footer>
 
     <button class="back-to-top" id="backToTop" type="button" aria-label="回到顶部">↑</button>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function (user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function () {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
