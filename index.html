@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="个人博客，记录技术、生活与思考" />
+    <meta name="theme-color" content="#0b1e36" />
+    <title>个人博客</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/config.js" defer></script>
+    <script src="js/markdown.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <a class="nav-brand-group" href="#/" aria-label="返回首页">
+          <span class="nav-logo" data-brand-mark>博</span>
+          <span class="nav-brand-text">
+            <strong class="nav-brand" data-site-title>个人博客</strong>
+            <small class="nav-tagline" data-site-description>记录技术、生活与思考</small>
+          </span>
+        </a>
+
+        <nav class="nav-center" id="site-nav" aria-label="主导航">
+          <a class="nav-link" href="#/" data-nav="home">首页</a>
+          <a class="nav-link" href="#/about" data-nav="about">关于</a>
+          <a class="nav-link" href="admin/" target="_blank" rel="noreferrer">写作后台</a>
+        </nav>
+
+        <div class="nav-actions">
+          <label class="nav-search">
+            <span class="sr-only">搜索文章</span>
+            <input id="searchInput" class="nav-search-input" type="search" placeholder="搜索文章..." autocomplete="off" />
+          </label>
+          <button class="nav-mobile-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="site-nav">菜单</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="app" class="main-content" tabindex="-1"></main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-brand-name" data-site-title>个人博客</span>
+          <span class="footer-sep">|</span>
+          <span data-site-description>记录技术、生活与思考</span>
+        </div>
+        <p class="footer-desc">用 Markdown 写作，用静态页面分享值得留下来的内容。</p>
+        <p class="footer-copy">© <span data-current-year>2026</span> <span data-site-author>你的名字</span></p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="回到顶部">↑</button>
+  </body>
+</html>

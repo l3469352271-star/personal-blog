@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: l3469352271-star/personal-blog
+  branch: main
+  base_url: https://REPLACE_WITH_YOUR_OAUTH_PROXY_DOMAIN
+  auth_endpoint: auth
+
+site_url: https://l3469352271-star.github.io/personal-blog/
+display_url: https://l3469352271-star.github.io/personal-blog/
+locale: zh_Hans
+publish_mode: simple
+media_folder: assets/uploads
+public_folder: assets/uploads
+
+collections:
+  - name: posts
+    label: 文章正文
+    label_singular: 文章
+    folder: content/posts
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - { label: 标题, name: title, widget: string }
+      - { label: 发布日期, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: 摘要, name: summary, widget: text }
+      - { label: 标签, name: tags, widget: list, required: false }
+      - { label: 阅读时间, name: readingTime, widget: string, required: false, hint: "例如：5 分钟" }
+      - { label: 正文, name: body, widget: markdown }
+
+  - name: post_index
+    label: 文章目录
+    files:
+      - name: posts
+        label: 首页文章列表
+        file: content/posts.json
+        format: json
+        fields:
+          - label: 文章
+            name: posts
+            widget: list
+            fields:
+              - { label: 标识, name: slug, widget: string, hint: "与文章文件名一致，例如 my-first-post" }
+              - { label: 标题, name: title, widget: string }
+              - { label: 发布日期, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+              - { label: 摘要, name: summary, widget: text }
+              - { label: 标签, name: tags, widget: list, required: false }
+              - { label: 阅读时间, name: readingTime, widget: string, required: false }
+              - { label: 文件路径, name: file, widget: string, hint: "例如 content/posts/my-first-post.md" }
+
+  - name: pages
+    label: 独立页面
+    files:
+      - name: about
+        label: 关于页面
+        file: content/about.md
+        fields:
+          - { label: 内容, name: body, widget: markdown }

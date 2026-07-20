@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "slug": "welcome",
+      "title": "欢迎来到我的博客",
+      "date": "2026-07-21",
+      "summary": "这是一个用 Markdown 写作、用静态页面分享想法的小空间。",
+      "tags": ["随笔", "博客"],
+      "readingTime": "3 分钟",
+      "file": "content/posts/welcome.md"
+    },
+    {
+      "slug": "static-blog-notes",
+      "title": "为什么我喜欢静态博客",
+      "date": "2026-07-18",
+      "summary": "从简单的文件结构开始，让写作回到内容本身。",
+      "tags": ["技术", "写作"],
+      "readingTime": "4 分钟",
+      "file": "content/posts/static-blog-notes.md"
+    },
+    {
+      "slug": "writing-workflow",
+      "title": "给自己的写作流程留一点空间",
+      "date": "2026-07-12",
+      "summary": "记录灵感、整理草稿，再把值得留下的内容发布出来。",
+      "tags": ["方法", "生活"],
+      "readingTime": "5 分钟",
+      "file": "content/posts/writing-workflow.md"
+    }
+  ]
+}
